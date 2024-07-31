@@ -1,0 +1,15 @@
+{
+    "name": "ayko_nascimento/password-generathor",
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayko Sousa do Nascimento",
+            "email": "ayko.souza74@gmail.com"
+        }
+    ],
+    "require": {}
+}
