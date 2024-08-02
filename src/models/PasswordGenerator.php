@@ -25,6 +25,6 @@ class PasswordGenerator {
         for ($i = 0; $i < $this->length; $i++) {
             $password .= $chars[rand(0, strlen($chars) - 1)];
         }
-        echo $password;
+        return $password;
     }
 }
