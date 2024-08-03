@@ -4,10 +4,10 @@ namespace app\models;
 
 class PasswordGenerator {
     public function __construct(
-        private int $length = 5,
-        private bool $use_uppercase = true,
-        private bool $use_numbers = true,
-        private bool $use_special_chars = true
+        private int $length,
+        private ?bool $use_uppercase,
+        private ?bool $use_numbers,
+        private ?bool $use_special_chars
     ){}
 
     public function generate() {
