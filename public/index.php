@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Password Generator</title>
 </head>
-<body class="w-screen h-screen bg-neutral-900">
+<body class="flex flex-col justify-center items-center h-screen w-screen bg-neutral-900">
     <main class="flex flex-col justify-center items-center text-white">
         <h1 class="mb-7 text-5xl text-teal-400">Password Generator</h1>
         <form action="" method="get" class="flex flex-col ">
@@ -43,7 +43,7 @@
 
             $new_password = new PasswordGenerator($lenght, $use_uppercase, $use_numbers, $use_special_chars);
             $new_password = $new_password->generate();
-            echo "<input type='text' name='password-generated' id='password-generated' class='p-1 bg-white rounded-lg mt-2' value='$new_password' readonly>";
+            echo "<input type='text' name='password-generated' class='p-1 bg-white rounded-lg mt-2' value='$new_password' readonly>";
             // echo $lenght . " " . $use_uppercase . " " . $use_numbers . " " . $use_special_chars;
         }
     ?>
