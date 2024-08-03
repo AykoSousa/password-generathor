@@ -9,7 +9,7 @@
 <body class="flex flex-col justify-center items-center h-screen w-screen bg-neutral-900">
     <main class="flex flex-col justify-center items-center text-white">
         <h1 class="mb-7 text-5xl text-teal-400">Password Generator</h1>
-        <form action="" method="get" class="flex flex-col" name="form">
+        <form action="" method="post" class="flex flex-col" name="form">
             <div class="flex flex-col mb-2">
                 <label for="lenght" class="mb-1">Lenght of chars:*</label>
                 <input type="number" name="lenght" id="lenght" class="p-1 rounded-lg text-black" required min=7>
@@ -34,10 +34,10 @@
         require('../vendor/autoload.php');
         use app\models\PasswordGenerator;
 
-        $lenght = intval($_GET["lenght"]);
-        $use_uppercase = $_GET["use-uppercase"] ?? false;
-        $use_numbers = $_GET["use-numbers"] ?? false;
-        $use_special_chars = $_GET["use-special-chars"] ?? false;
+        $lenght = $_POST["lenght"] ?? false;
+        $use_uppercase = $_POST["use-uppercase"] ?? false;
+        $use_numbers = $_POST["use-numbers"] ?? false;
+        $use_special_chars = $_POST["use-special-chars"] ?? false;
 
         $new_password = new PasswordGenerator($lenght, $use_uppercase, $use_numbers, $use_special_chars);
         $new_password = $new_password->generate();
